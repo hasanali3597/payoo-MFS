@@ -16,58 +16,107 @@
 
 </head>
 
-<body class="bg-[#f4f5f7] h-[100vh] max-w-lg m-auto justify-center items-center ">
-    <nav class=" min-h-[50px] justify-between items-center w-full border-b-1 border-[#c4f7d0] flex">
-        <div class="flex">
-            <div><img class=" h-[50px]" src="./Group.png" alt=""></div>
-            <div>
-                <h class=" font-bold text-xl">$ <span>45000</span></h1>
-                    <p class="font-semibold text-sm text-[#08080880]">Available Balance</p>
+<body class="bg-[#f4f5f7] h-[100vh] max-w-[350px] m-auto justify-center items-center ">
+    <section class=" bg-white">
+        <nav class="  min-h-[50px] justify-between items-center w-full border-b-1 border-[#c4f7d0] flex">
+            <div class="flex p-3">
+                <div><img class=" h-[50px]" src="./Group.png" alt=""></div>
+                <div>
+                    <h class=" font-bold text-xl">$ <span>45000</span></h1>
+                        <p class="font-semibold text-sm text-[#08080880]">Available Balance</p>
+                </div>
             </div>
+            <div class="border-2 border-[#e6e6e6] rounded-lg">
+                <button class="text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket"> </i>Log Out</button>
+            </div>
+            <!-- Welcome to Payooo! -->
+
+        </nav>
+        <div class="mt-8 p-3">
+            <h1 class=" text-2xl font-semibold">🔥 Welcome to Payooo!</h1>
+            <p class="text-xs text-[#08080880] mt-1 ">Enjoy easy and convenient financial services with us. <br> Cashout
+                charge is low
+                and </p>
         </div>
+
+        <!-- card -->
+        <div class="p-3  min-h-[200px] grid grid-cols-3 gap-4 mt-6 ">
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./wallet1.png" alt="">
+                <h1 class="text-[#08080880]">Add Money</h1>
+            </div>
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./send1.png" alt="">
+                <h1 class="text-[#08080880]">Cashout</h1>
+            </div>
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./money1.png" alt="">
+                <h1 class="text-[#08080880]">Transfer Money</h1>
+            </div>
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./bonus1.png" alt="">
+                <h1 class="text-[#08080880]">Get Bonus</h1>
+            </div>
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./purse1.png" alt="">
+                <h1 class="text-[#08080880]">Pay Bill</h1>
+            </div>
+            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+                <img class="mx-auto" src="./transaction1.png" alt="">
+                <h1 class="text-[#08080880]">Transactions</h1>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+    <section class="all-section">
+        <!-- Add Money -->
         <div>
-            <button class="text-[#08080880]"><i class="fa-solid fa-arrow-right-from-bracket"></i> Default</button>
+            <h1 class="text-xl font-semibold text-[#080808e6] p-3">Add Money</h1>
+            <form class="bg-white p-3" >
+                <div  >
+                    <label class="font-medium ">Select A Bank</label>
+                    <br>
+                    <select class="select rounded-3xl bg-[#f4f5f7]  ">
+                        <option disabled selected class="font-medium">Select Bank</option>
+                        <option>Nagad</option>
+                        <option>Bkash</option>
+                        <option>Rocket</option>
+                        <option>Upai</option>
+                    </select>
+                </div>
+                <div class="mt-5" >
+                    <label class="text-base font-medium" for="">Bank Account Number</label>
+                    <br>
+                    <input type="text" placeholder="Enter 11 digit account number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Amount to Add</label>
+                    <br>
+                    <input type="text" placeholder="Add Amount to withdraw"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Pin Number</label>
+                    <br>
+                    <input type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div>
+                    <button class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl">Add Money</button>
+                </div>
+            </form>
         </div>
-        <!-- Welcome to Payooo! -->
+    </section>
+</body>
 
-    </nav>
-    <div class="mt-8">
-        <h1 class=" text-2xl font-semibold">🔥 Welcome to Payooo!</h1>
-        <p class="text-xs text-[#08080880] ">Enjoy easy and convenient financial services with us. Cashout charge is low
-            and </p>
-    </div>
+<body>
 
-    <!-- card -->
-    <div class=" border-2 border-red-500 min-h-[200px] grid grid-cols-3 gap-4 mt-6 ">
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-        <div class="border-2 border-[#e6e6e6] text-center p-3">
-            <img class="mx-auto" src="./wallet1.png" alt="">
-            <h1 class="text-[#08080880]">Add Money</h1>
-        </div>
-       
-        
-        
-
-    </div>
 
 
 </body>
