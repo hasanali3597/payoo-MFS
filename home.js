@@ -1,32 +1,44 @@
-// add moneytotalAvailableBalance
-
-const validpin = 1234;
-
-
+//add money
+const PIN = 1234;
 document.getElementById('addMoneyBtn')
-    .addEventListener('click', function (event) {
-        event.preventDefault()
-        // console.log('jadhc')
-        const bank = document.getElementById('bank').value;
-        const bankNumber = document.getElementById('bank-number').value;
-        const addAmount = parseInt(document.getElementById('add-amount').value);
-        const accountpin = parseInt(document.getElementById('account-pin').value);
+.addEventListener('click', function (event){
+event.preventDefault()
+// console.log("sjdksiaji")
+const texaccountNumber = document.getElementById('accountnumber');
+const accountNumber = document.getElementById('accountnumber').value;
+const texamountAdd = document.getElementById('amountadd');
+const amountAdd = parseInt(document.getElementById('amountadd').value);
+const texyourPin = document.getElementById('yourpin');
+const yourPin =parseInt(document.getElementById('yourpin').value);
+
+const availableBalance = parseInt(document.getElementById('available-balance').innerText);
+if(accountNumber.length <11){
+    alert("invalid account number".repeat )
+}
+if(yourPin !==PIN){
+    alert('invalid pin')
+}
+
+const totalAvailableBalance = amountAdd + availableBalance;
+document.getElementById('available-balance').innerText = totalAvailableBalance;
+console.log(texaccountNumber) 
+
+texaccountNumber.value = ""
+texamountAdd.value = ""
+texyourPin.value = ""
+
+})
 
 
+//toggling
+document.getElementById('addmoneybtn')
+.addEventListener('click', function() {
+    document.getElementById('cashoutfrom').style.display = "none"
+    document.getElementById('addmoneyfom').style.display = "block";
+})
 
-        const availableBalance = parseInt(document.getElementById('available-balance').innerText);
-        if (bankNumber.length < 11) {
-            alert("please provide valid number").repeat;
-        }
-        if (validpin != accountpin) {
-            alert('please provide valid pin number')
-        }
-
-
-        const totalAvailableBalance = availableBalance + addAmount;
-
-        document.getElementById('available-balance').innerText = totalAvailableBalance
-
-    })
-
-
+document.getElementById('cashoutbtn')
+.addEventListener('click', function (){
+    document.getElementById('addmoneyfom').style.display = "none";
+    document.getElementById('cashoutfrom').style.display = "block"
+})
