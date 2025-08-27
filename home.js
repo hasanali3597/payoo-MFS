@@ -1,3 +1,11 @@
+//sher function 
+
+function elementvalueparseInt(id) {
+    const elementnumber = parseInt(document.getElementById(id).value);
+    return elementnumber;
+}
+
+
 //add money
 const PIN = 1234;
 document.getElementById('addMoneyBtn')
@@ -34,13 +42,21 @@ document.getElementById('addMoneyBtn')
 document.getElementById('addmoneybtn')
     .addEventListener('click', function () {
         document.getElementById('cashoutfrom').style.display = "none"
+        document.getElementById('transferfrom').style.display = "none"
         document.getElementById('addmoneyfom').style.display = "block";
     })
 
 document.getElementById('cashoutbtn')
     .addEventListener('click', function () {
         document.getElementById('addmoneyfom').style.display = "none";
+        document.getElementById('transferbtn').style.display = "none";
         document.getElementById('cashoutfrom').style.display = "block"
+    })
+document.getElementById('transferbtn')
+    .addEventListener("click", function () {
+        document.getElementById('addmoneyfom').style.display = "none";
+        document.getElementById('cashoutfrom').style.display = "none"
+        document.getElementById('transferbtn').style.display = 'block'
     })
 
 //Cashout
@@ -71,3 +87,24 @@ document.getElementById('cashoutBtn')
         textcashoutpin.value = ''
         // console.log(cashouttotalamount)
     })
+//Transfer Money 
+document.getElementById('TransferBtn')
+    .addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const transferavelblance = parseInt(document.getElementById('available-balance').innerText)
+        const transferaccountnumber = document.getElementById('transferAccountNumber').value;
+        const transferAmount = elementvalueparseInt('Transferamount');
+
+        const transferpin = elementvalueparseInt('Transferpin');
+
+        if (transferaccountnumber.length < 11) {
+            alert("invalid account number")
+        }
+        if (transferpin !== PIN) {
+            alert("invalid Pin")
+        }
+        const totaletransferblance = transferavelblance - transferAmount;
+        document.getElementById('available-balance').innerText = (totaletransferblance)
+    })
+

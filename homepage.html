@@ -49,7 +49,7 @@
                 <img class="mx-auto" src="./send1.png" alt="">
                 <h1 class="text-[#08080880]">Cashout</h1>
             </div>
-            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+            <div id="transferbtn" class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
                 <img class="mx-auto" src="./money1.png" alt="">
                 <h1 class="text-[#08080880]">Transfer Money</h1>
             </div>
@@ -74,7 +74,7 @@
 
 
     <section class="all-section">
-        
+
         <div id="addmoneyfom">
             <!-- Add Money  from-->
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Add Money</h1>
@@ -82,7 +82,7 @@
                 <div>
                     <label class="font-medium ">Select A Bank</label>
                     <br>
-                    <select  class="select rounded-3xl bg-[#f4f5f7]  ">
+                    <select class="select rounded-3xl bg-[#f4f5f7]  ">
                         <option disabled selected class="font-medium">Select Bank</option>
                         <option>Nagad</option>
                         <option>Bkash</option>
@@ -90,7 +90,7 @@
                         <option>Upai</option>
                     </select>
                 </div>
-                <div  class="mt-5">
+                <div class="mt-5">
                     <label class="text-base font-medium" for="">Bank Account Number</label>
                     <br>
                     <input id="accountnumber" type="text" placeholder="Enter 11 digit account number"
@@ -114,21 +114,21 @@
                 </div>
             </form>
         </div>
-        <div id="cashoutfrom">
+        <div id="cashoutfrom" class="hidden">
             <!-- Cashout from-->
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Cash Out</h1>
             <form class="bg-white p-3">
-               
-                <div  class="mt-5">
-                    <label class="text-base font-medium" for="">Bank Account Number</label>
+
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Account Number</label>
                     <br>
                     <input id="cashoutacconutnumber" type="text" placeholder="Enter 11 digit account number"
                         class=" input bg-[#f4f5f7] mt-3 rounded-2xl" />
                 </div>
                 <div class="mt-5">
-                    <label class="text-base font-medium" for="">Amount to Add</label>
+                    <label class="text-base font-medium" for="">Amount</label>
                     <br>
-                    <input id="cashamount" type="text" placeholder="Add Amount to withdraw"
+                    <input id="cashamount" type="text" placeholder="Amount to withdraw"
                         class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
                 </div>
                 <div class="mt-5">
@@ -140,6 +140,35 @@
                 <div>
                     <button id="cashoutBtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl"> Add
                         Withdraw Money</button>
+                </div>
+            </form>
+        </div>
+        <div id="transferfrom" class="hidden">
+            <!-- Transfer Money from-->
+            <h1 class="text-xl font-semibold text-[#080808e6] p-3">Transfer Money</h1>
+            <form class="bg-white p-3">
+
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">User Account Number</label>
+                    <br>
+                    <input id="transferAccountNumber" type="text" placeholder="Enter 11 digit account number"
+                        class=" input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Amount</label>
+                    <br>
+                    <input id="Transferamount" type="text" placeholder="Enter amount to transfer"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Pin Number</label>
+                    <br>
+                    <input id="Transferpin" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div>
+                    <button id="TransferBtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl"> Send
+                        Now</button>
                 </div>
             </form>
         </div>
