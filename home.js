@@ -47,7 +47,7 @@ document.getElementById('addmoneybtn')
         for (const from of froms) {
             from.style.display = 'none'
         }
-        document.getElementById('addmoneyfom').style.display = "block"
+        document.getElementById('addmoneyform').style.display = "block"
     })
 
 document.getElementById('cashoutbtn')
@@ -69,7 +69,8 @@ document.getElementById('transfer')
     })
 
 document.getElementById('getbonus')
-    .addEventListener('click', function () {
+    .addEventListener('click', function (e) {
+        e.preventDefault()
         const froms = document.getElementsByClassName('hasan')
         for (const from of froms) {
             from.style.display = 'none'
@@ -87,7 +88,7 @@ document.getElementById('PayBillCard')
         document.getElementById('PayBillfom').style.display = "block"
     })
 
-//Cashout
+// Cashout
 document.getElementById('cashoutBtn')
     .addEventListener('click', function (event) {
         event.preventDefault()
@@ -148,6 +149,7 @@ document.getElementById('TransferBtn')
 const code = 'hasan20'
 document.getElementById('getbonusbtn')
     .addEventListener('click', function (e) {
+        e.preventDefault()
         const balancetx = document.getElementById('available-balance')
         const mainBalance = parseInt(balancetx.innerText)
 
