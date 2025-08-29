@@ -49,11 +49,11 @@
                 <img class="mx-auto" src="./send1.png" alt="">
                 <h1 class="text-[#08080880]">Cashout</h1>
             </div>
-            <div id="transferbtn" class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+            <div id="transfer" class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
                 <img class="mx-auto" src="./money1.png" alt="">
                 <h1 class="text-[#08080880]">Transfer Money</h1>
             </div>
-            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+            <div id="getbonus" class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
                 <img class="mx-auto" src="./bonus1.png" alt="">
                 <h1 class="text-[#08080880]">Get Bonus</h1>
             </div>
@@ -74,8 +74,8 @@
 
 
     <section class="all-section">
-
-        <div id="addmoneyfom">
+        <!-- from -->
+        <div id="addmoneyfom" class="hasan ">
             <!-- Add Money  from-->
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Add Money</h1>
             <form class="bg-white p-3">
@@ -114,8 +114,9 @@
                 </div>
             </form>
         </div>
-        <div id="cashoutfrom" class="hidden">
-            <!-- Cashout from-->
+        <!-- Cashout from-->
+        <div id="cashoutfrom" class="hasan  hidden">
+
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Cash Out</h1>
             <form class="bg-white p-3">
 
@@ -143,8 +144,9 @@
                 </div>
             </form>
         </div>
-        <div id="transferfrom" class="hidden">
-            <!-- Transfer Money from-->
+        <!-- Transfer Money from-->
+        <div id="transferfrom" class="hasan hidden">
+
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Transfer Money</h1>
             <form class="bg-white p-3">
 
@@ -169,6 +171,23 @@
                 <div>
                     <button id="TransferBtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl"> Send
                         Now</button>
+                </div>
+            </form>
+        </div>
+        <!-- Get Bonus from-->
+        <div id="getbonuss"  class="hasan ">
+
+            <h1 class="text-xl font-semibold text-[#080808e6] p-3">Get Bonus</h1>
+            <form class="bg-white p-3">
+
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Enter Bonus Coupon</label>
+                    <br>
+                    <input id="getbonusCopn" type="text" placeholder="Enter your coupon"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div>
+                    <button id="getbonusbtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl">Apply Coupon</button>
                 </div>
             </form>
         </div>

@@ -39,25 +39,45 @@ document.getElementById('addMoneyBtn')
 
 
 //toggling
+
+
 document.getElementById('addmoneybtn')
     .addEventListener('click', function () {
-        document.getElementById('cashoutfrom').style.display = "none"
-        document.getElementById('transferfrom').style.display = "none"
-        document.getElementById('addmoneyfom').style.display = "block";
+        const froms = document.getElementsByClassName('hasan')
+        for (const from of froms) {
+            from.style.display = 'none'
+        }
+        document.getElementById('addmoneyfom').style.display = "block"
     })
 
 document.getElementById('cashoutbtn')
     .addEventListener('click', function () {
-        document.getElementById('addmoneyfom').style.display = "none";
-        document.getElementById('transferbtn').style.display = "none";
+        const froms = document.getElementsByClassName('hasan')
+        for (const from of froms) {
+            from.style.display = 'none'
+        }
         document.getElementById('cashoutfrom').style.display = "block"
     })
-document.getElementById('transferbtn')
-    .addEventListener("click", function () {
-        document.getElementById('addmoneyfom').style.display = "none";
-        document.getElementById('cashoutfrom').style.display = "none"
-        document.getElementById('transferbtn').style.display = 'block'
+
+document.getElementById('transfer')
+    .addEventListener('click', function () {
+        const froms = document.getElementsByClassName('hasan')
+        for (const from of froms) {
+            from.style.display = 'none'
+        }
+        document.getElementById('transferfrom').style.display = "block"
     })
+
+    document.getElementById('getbonus')
+    .addEventListener('click', function(){
+         const froms = document.getElementsByClassName('hasan')
+        for (const from of froms) {
+            from.style.display = 'none'
+        }
+        document.getElementById('getbonuss').style.display = "block"
+    })  
+   
+
 
 //Cashout
 document.getElementById('cashoutBtn')
@@ -92,12 +112,16 @@ document.getElementById('TransferBtn')
     .addEventListener('click', function (e) {
         e.preventDefault();
 
-        const transferavelblance = parseInt(document.getElementById('available-balance').innerText)
+        const texttransferaccountnumber = document.getElementById("transferAccountNumber")
         const transferaccountnumber = document.getElementById('transferAccountNumber').value;
+
+        const texttransferAmount = document.getElementById('Transferamount')
         const transferAmount = elementvalueparseInt('Transferamount');
 
+        const texttransferpin = document.getElementById('Transferpin')
         const transferpin = elementvalueparseInt('Transferpin');
 
+        const transferavelblance = parseInt(document.getElementById('available-balance').innerText)
         if (transferaccountnumber.length < 11) {
             alert("invalid account number")
         }
@@ -106,5 +130,27 @@ document.getElementById('TransferBtn')
         }
         const totaletransferblance = transferavelblance - transferAmount;
         document.getElementById('available-balance').innerText = (totaletransferblance)
+
+        texttransferaccountnumber.value = ''
+        texttransferAmount.value = ''
+        texttransferpin.value = ''
     })
 
+// Get Bonus
+const code = 'hasan20'
+document.getElementById('getbonusbtn')
+.addEventListener('click', function (e) {
+    const balancetx = document.getElementById('available-balance')
+    const mainBalance =parseInt(balancetx.innerText)
+
+    const Cod = document.getElementById('getbonusCopn').value;
+
+    if(code === Cod){
+
+        const newb = mainBalance + 50;
+        balancetx.innerText = newb
+    }
+    else{
+        alert ("invalid cod")
+    }
+})
