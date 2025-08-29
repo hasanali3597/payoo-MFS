@@ -57,7 +57,7 @@
                 <img class="mx-auto" src="./bonus1.png" alt="">
                 <h1 class="text-[#08080880]">Get Bonus</h1>
             </div>
-            <div class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
+            <div id="PayBillCard" class="border-2 border-[#e6e6e6] text-center p-3 rounded-lg">
                 <img class="mx-auto" src="./purse1.png" alt="">
                 <h1 class="text-[#08080880]">Pay Bill</h1>
             </div>
@@ -75,8 +75,9 @@
 
     <section class="all-section">
         <!-- from -->
+        <!-- Add Money  from-->
         <div id="addmoneyfom" class="hasan ">
-            <!-- Add Money  from-->
+
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Add Money</h1>
             <form class="bg-white p-3">
                 <div>
@@ -175,7 +176,7 @@
             </form>
         </div>
         <!-- Get Bonus from-->
-        <div id="getbonuss"  class="hasan ">
+        <div id="getbonuss" class="hasan hidden">
 
             <h1 class="text-xl font-semibold text-[#080808e6] p-3">Get Bonus</h1>
             <form class="bg-white p-3">
@@ -187,7 +188,46 @@
                         class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
                 </div>
                 <div>
-                    <button id="getbonusbtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl">Apply Coupon</button>
+                    <button id="getbonusbtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl">Apply
+                        Coupon</button>
+                </div>
+            </form>
+        </div>
+        <!-- Pay Bill from-->
+        <div id="PayBillfom" class="hasan hidden">
+
+            <h1 class="text-xl font-semibold text-[#080808e6] p-3">Pay Bill</h1>
+            <form class="bg-white p-3">
+                <div>
+                    <label class="font-medium ">Select To Pay</label>
+                    <br>
+                    <select class="select rounded-3xl bg-[#f4f5f7]  ">
+                        <option disabled selected class="font-medium">Select Bank</option>
+                        <option>Nagad</option>
+                        <option>Bkash</option>
+                        <option>Rocket</option>
+                        <option>Upai</option>
+                    </select>
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Biller Account Number</label>
+                    <br>
+                    <input id="PayBillAcountNurber" type="text" placeholder="Enter account number"
+                        class=" input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Amount to Pay</label>
+                    <br>
+                    <input id="PayBillAmount" type="text" placeholder="Add Amount to pay" class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div class="mt-5">
+                    <label class="text-base font-medium" for="">Pin Number</label>
+                    <br>
+                    <input id="PayBillPin" type="text" placeholder="Enter 4 digit pin number"
+                        class="input bg-[#f4f5f7] mt-3 rounded-2xl" />
+                </div>
+                <div>
+                    <button id="paybtn" class="btn btn-active btn-primary mt-5 w-full rounded-3xl text-xl">Pay Now</button>
                 </div>
             </form>
         </div>

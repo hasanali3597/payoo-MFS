@@ -68,16 +68,24 @@ document.getElementById('transfer')
         document.getElementById('transferfrom').style.display = "block"
     })
 
-    document.getElementById('getbonus')
-    .addEventListener('click', function(){
-         const froms = document.getElementsByClassName('hasan')
+document.getElementById('getbonus')
+    .addEventListener('click', function () {
+        const froms = document.getElementsByClassName('hasan')
         for (const from of froms) {
             from.style.display = 'none'
         }
         document.getElementById('getbonuss').style.display = "block"
-    })  
-   
+    })
 
+document.getElementById('PayBillCard')
+.addEventListener('click', function(e){
+    e.preventDefault()
+      const froms = document.getElementsByClassName('hasan')
+        for (const from of froms) {
+            from.style.display = 'none'
+        }
+        document.getElementById('PayBillfom').style.display = "block"
+    })
 
 //Cashout
 document.getElementById('cashoutBtn')
@@ -139,18 +147,46 @@ document.getElementById('TransferBtn')
 // Get Bonus
 const code = 'hasan20'
 document.getElementById('getbonusbtn')
-.addEventListener('click', function (e) {
-    const balancetx = document.getElementById('available-balance')
-    const mainBalance =parseInt(balancetx.innerText)
+    .addEventListener('click', function (e) {
+        const balancetx = document.getElementById('available-balance')
+        const mainBalance = parseInt(balancetx.innerText)
 
-    const Cod = document.getElementById('getbonusCopn').value;
+        const Cod = document.getElementById('getbonusCopn').value;
 
-    if(code === Cod){
+        if (code === Cod) {
 
-        const newb = mainBalance + 50;
-        balancetx.innerText = newb
-    }
-    else{
-        alert ("invalid cod")
-    }
-})
+            const newb = mainBalance + 50;
+            balancetx.innerText = newb
+        }
+        else {
+            alert("invalid cod")
+        }
+    })
+// <!-- Pay Bill from-->
+document.getElementById('paybtn')
+    .addEventListener('click', function (e) {
+        e.preventDefault()
+        const PayBillacountnurber = document.getElementById('PayBillAcountNurber')
+        const PayBillAcountnurber = document.getElementById('PayBillAcountNurber').value;
+        const Paybillamount = document.getElementById('PayBillAmount')
+        const PayBillamount = parseInt(document.getElementById('PayBillAmount').value)
+        const Paybillpin = document.getElementById('PayBillPin')
+        const PayBillpin = parseInt(document.getElementById('PayBillPin').value);
+
+
+        const totalavailablebalance = parseInt(document.getElementById('available-balance').innerText)
+        if (PayBillAcountnurber.length < 11) {
+            alert("account number vul")
+        }
+
+        if (PayBillpin !== PIN) {
+            alert("pin vul")
+        }
+
+        const PayBillavAilableBalance = totalavailablebalance - PayBillamount;
+        document.getElementById('available-balance').innerText = PayBillavAilableBalance;
+        PayBillacountnurber.value = '';
+        Paybillamount.value = '';
+        Paybillpin.value = '';
+
+    })
